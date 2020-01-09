@@ -1,15 +1,18 @@
 {
-  "name": "mathcalculator",
+  "name": "mathcalculator-cordova-plugin",
   "version": "0.0.1",
   "description": "This is Math Calculator example using cordova plugin",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "cordova": {
+    "id": "mathcalculator-cordova-plugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
   },
   "keywords": [
-    "Math",
-    "calculator",
-    "Ionic"
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
   ],
   "author": "Tamizh",
   "license": "ISC"

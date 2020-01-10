@@ -15,5 +15,17 @@
     "cordova-ios"
   ],
   "author": "Tamizh",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senthiece42/MathCalculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/senthiece42/MathCalculator/issues"
+  },
+  "homepage": "https://github.com/senthiece42/MathCalculator#readme"
 }

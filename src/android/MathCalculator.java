@@ -61,6 +61,11 @@ public class MathCalculator extends CordovaPlugin {
 
                 //callback.success( args.toString() );
                 //callback.success("" + (p1 + p2));
+
+                String message = " " + args.getJSONArray(0).toString();
+
+                callback.success(message);
+
             } catch(Exception ex) {
                 //callback.error("Something went wrong "+ ex );
             }
@@ -69,9 +74,7 @@ public class MathCalculator extends CordovaPlugin {
 
             
 
-            String message = " " + args.getJSONArray(0).length();
-
-            callback.success(message);
+            
 
         } else {
             callback.error("Please do not pass null value");

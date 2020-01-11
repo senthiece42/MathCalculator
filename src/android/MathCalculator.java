@@ -51,15 +51,16 @@ public class MathCalculator extends CordovaPlugin {
                  */
                 int p1 = 0, p2 = 0;
 
-                try{
+                /***try{
                     p1 = Integer.parseInt(args.getString(0));
                     p2 = Integer.parseInt(args.getString(1));
                 } catch(Exception ex){
                     callback.error("Something went wrong while data converting time : "+ ex );    
-                }
+                }**/
                 
 
-                callback.success("" + (p1 + p2));
+                callback.success("" + args.toString());
+                //callback.success("" + (p1 + p2));
             } catch(Exception ex) {
                 callback.error("Something went wrong "+ ex );
             }

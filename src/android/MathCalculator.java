@@ -65,7 +65,9 @@ public class MathCalculator extends CordovaPlugin {
                 //callback.error("Something went wrong "+ ex );
             }
 
-            String message = args.getString(0) + " === " + args.getString(1);
+            //String message = args.getString(0) + " === " + args.getString(1);
+
+            String message = " " + args.length();
 
             callback.success(message);
 

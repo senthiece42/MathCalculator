@@ -43,7 +43,7 @@ public class MathCalculator extends CordovaPlugin {
                 int p2 = Integer.parseInt(args.getJSONObject(0).getString("1"));
                 callback.success("" + (p1 + p2));
             } catch(Exception ex) {
-                callback.error("Something went wrong "+ ex + " == " + args.getJSONObject(0));
+                callback.error("Something went wrong "+ ex );
             }
         } else {
             callback.error("Please do not pass null value");

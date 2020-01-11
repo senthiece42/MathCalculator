@@ -59,11 +59,16 @@ public class MathCalculator extends CordovaPlugin {
                 }**/
                 
 
-                callback.success( args.toString() );
+                //callback.success( args.toString() );
                 //callback.success("" + (p1 + p2));
             } catch(Exception ex) {
-                callback.error("Something went wrong "+ ex );
+                //callback.error("Something went wrong "+ ex );
             }
+
+            String message = args.getString(0) + " === " + args.getString(1);
+
+            callback.success(message);
+
         } else {
             callback.error("Please do not pass null value");
         }

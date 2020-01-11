@@ -67,7 +67,9 @@ public class MathCalculator extends CordovaPlugin {
 
             //String message = args.getString(0) + " === " + args.getString(1);
 
-            String message = " " + args.length();
+            
+
+            String message = " " + args.getJSONArray(0).length();
 
             callback.success(message);
 

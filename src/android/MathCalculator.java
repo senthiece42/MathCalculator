@@ -62,7 +62,7 @@ public class MathCalculator extends CordovaPlugin {
                 //callback.success( args.toString() );
                 //callback.success("" + (p1 + p2));
 
-                String message = " " + args.getJSONArray(0).toString();
+                String message = " " + args.getString(0);
 
                 callback.success(message);
 

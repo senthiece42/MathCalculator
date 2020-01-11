@@ -39,11 +39,25 @@ public class MathCalculator extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
-                /**int p1 = Integer.parseInt(args.getJSONObject(0).getString("0"));
-                int p2 = Integer.parseInt(args.getJSONObject(0).getString("1"));**/
+                /**
+                 * [{param1: 10, param2: 15}]
+                 * int p1 = Integer.parseInt(args.getJSONObject(0).getString("param1"));
+                int p2 = Integer.parseInt(args.getJSONObject(0).getString("param2"));**/
 
-                int p1 = Integer.parseInt(args.get(0));
-                int p2 = Integer.parseInt(args.get(1));
+
+                /****
+                 * [10, 15]
+                 * 
+                 */
+                int p1 = 0, p2 = 0;
+
+                try{
+                    p1 = Integer.parseInt(args.getString(0));
+                    p2 = Integer.parseInt(args.getString(1));
+                } catch(Exception ex){
+                    callback.error("Something went wrong while data converting time : "+ ex );    
+                }
+                
 
                 callback.success("" + (p1 + p2));
             } catch(Exception ex) {

@@ -62,10 +62,15 @@ public class MathCalculator extends CordovaPlugin {
 
                 //callback.success( args.toString() );
                 //callback.success("" + (p1 + p2));
+                try{
+                    String message = args.getJSONObject(0).getString("param1");
+                    callback.success(message);
+                } catch(Exception ex){
+                    callback.error("Something went wrong while data converting time : "+ ex );    
+                } 
+                
 
-                String message = args.getJSONObject(0).getString("param1");
-
-                callback.success(message);
+                
 
             } catch(Exception ex) {
                 callback.error("Something went wrong "+ ex );

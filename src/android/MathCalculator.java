@@ -66,13 +66,13 @@ public class MathCalculator extends CordovaPlugin {
                     //String message = args.getJSONObject(0).getString("param1");
                     //String message = args.getJSONArray(0).getString(0);
                     String message = " Comming Input Is:  " + args.opt(0);
-                    callback.success(message);
+                    
                 } catch(Exception ex){
                     callback.error("Something went wrong while data converting time : "+ ex );    
                 } 
                 
 
-                
+                callback.success("" + message);
 
             } catch(Exception ex) {
                 callback.error("Something went wrong "+ ex );

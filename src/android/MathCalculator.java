@@ -37,6 +37,7 @@ public class MathCalculator extends CordovaPlugin {
     }
 
     private void add(JSONArray args, CallbackContext callback) {
+
         if(args != null) {
             try {
                 /**
@@ -62,7 +63,7 @@ public class MathCalculator extends CordovaPlugin {
                 //callback.success( args.toString() );
                 //callback.success("" + (p1 + p2));
 
-                String message = " " + args.getString(0);
+                String message = args.getJSONObject(0).getString("param1");
 
                 callback.success(message);
 
